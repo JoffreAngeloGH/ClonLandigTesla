@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import NavBar from "../components/NavBar.astro";
+---
+
+<Layout title="Welcome to Astro.">
+  <h1
+    class="flex justify-center md:text-7xl text-3xl font-bold animate-fade-in border-2 border-green-500"
+  >
+    Probando cositas
+  </h1>
+  <h2>Probando Grid y Flex Box</h2>
+  <section class="flex place-content-evenly
+  border-2
+  border-blue-600
+  mt-5">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+  </section>
+</Layout>
+
+<style>
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer components {
+    .card {
+      @apply bg-red-500 w-40 h-40 grid place-content-center rounded-lg text-white font-bold border-2 border-red-700 text-4xl mx-1;
+    }
+  }
+</style>
