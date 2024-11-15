@@ -2,19 +2,34 @@
 import Layout from "../layouts/Layout.astro";
 import NavBar from "../components/NavBar.astro";
 import Backgroudheder from "../components/Backgroudheder.astro";
+import BGheder2 from "../components/BGheder2.astro";
+import Secciones from "../components/Secciones.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <NavBar />
-  <main class="snap-y snap-mandatory relative w-screen h-screen overflow-auto">
+  <NavBar data-header-color="black" class="landing-section" />
+  <main
+    class="snap-y snap-mandatory relative w-screen h-screen overflow-auto scroll"
+  >
     <div class="snap-center">
       <Backgroudheder />
     </div>
     <div class="snap-center">
-      <Backgroudheder />
+      <BGheder2 />
     </div>
     <div class="snap-center">
-      <Backgroudheder />
+      <Secciones
+        titulo="Model 3"
+        precio="Desde 25.490 €"
+        subtitulo="Precio con la aplicación de los programas Tesla Boost e incentivos de movilidad eléctrica"
+      >
+        <img
+          slot="background"
+          class="object-center object-cover h-full w-screen rounded-lg"
+          src="/TeslaModel3.png"
+          alt=""
+        />
+      </Secciones>
     </div>
   </main>
 </Layout>
